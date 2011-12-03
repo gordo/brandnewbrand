@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Gordon Mei" />
+<title>The Eventbrite Logo - One Anchor Element and a Whole Lot of CSS</title>
+
+<!-- can't legally roll @font-face with omnes pro on my own without this -->
+<!-- using "report" because it's the closest typeface available in the free accounts -->
+<script type="text/javascript" src="http://use.typekit.com/dcu7znt.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 20px;
+}
+
+a::before {
+    content: "TM";
+    text-indent: 190px;
+    text-indent: -moz-calc(187px + 3px);
+    color: #ff812e;
+    text-shadow: none;
+    font-size: 10px;
+    font-style: normal;
+    font-family: "Helvetica", "Arial", sans-serif;
+    letter-spacing: normal;
+    display: block;
+    margin-bottom: -10px;
+    width: 187px;
+    height: 15px;
+    background-image: -webkit-gradient(radial, right top, 0, right top, 960, color-stop(0, #ff812e), color-stop(1, #ff7724));
+    background-image: -webkit-radial-gradient(right top, ellipse farthest-side, #ff812e 0%, #ff7724 100%);
+    background-image: -moz-radial-gradient(right top, ellipse farthest-side, #ff812e 0%, #ff7724 100%);
+    background-image: -o-radial-gradient(right top, ellipse farthest-side, #ff812e 0%, #ff7724 100%);
+    background-image: -ms-radial-gradient(right top, ellipse farthest-side, #ff812e 0%, #ff7724 100%);
+    background-image: radial-gradient(right top, ellipse farthest-side, #ff812e 0%, #ff7724 100%);
+    -webkit-transform: rotate(2.5deg);
+    -moz-transform: rotate(2.5deg);
+    -o-transform: rotate(2.5deg);
+    -ms-transform: rotate(2.5deg);
+     transform: rotate(2.5deg);
+    -webkit-transform-origin: 100% 0%;
+    -moz-transform-origin: 100% 0%;
+    -o-transform-origin: 100% 0%;
+    -ms-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0;
+}
+
+a {
+    display: block;
+    width: 187px;
+    height: 44px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff812e), color-stop(1, #ff5502));
+    background-image: -webkit-linear-gradient(top, #ff812e 0%, #ff5502 100%);
+    background-image: -moz-linear-gradient(top, #ff812e 0%, #ff5502 100%);
+    background-image: -o-linear-gradient(top, #ff812e 0%, #ff5502 100%);
+    background-image: -ms-linear-gradient(top, #ff812e 0%, #ff5502 100%);
+    background-image: linear-gradient(top, #ff812e 0%, #ff5502 100%);
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0;
+    text-shadow: 1px 1px 0 #ff440b;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Arial Rounded MT", "Helvetica", "Arial", sans-serif;
+    /* font-size: 30px; */ /* use this if omnes pro is not at the front of the font stack */
+    font-size: 35px; /* only for use with "report" typeface imported via typekit */
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+a::after {
+    content: "";
+    display: block;
+    margin-top: -12px;
+    width: 187px;
+    height: 15px;
+    background-image: -webkit-gradient(radial, right top, 0, right top, 960, color-stop(0, #ff5d0a), color-stop(1, #ff5804));
+    background-image: -webkit-radial-gradient(right top, ellipse farthest-side, #ff5d0a 0%, #ff5804 100%);
+    background-image: -moz-radial-gradient(right top, ellipse farthest-side, #ff5d0a 0%, #ff5804 100%);
+    background-image: -o-radial-gradient(right top, ellipse farthest-side, #ff5d0a 0%, #ff5804 100%);
+    background-image: -ms-radial-gradient(right top, ellipse farthest-side, #ff5d0a 0%, #ff5804 100%);
+    background-image: radial-gradient(right top, ellipse farthest-side, #ff5d0a 0%, #ff5804 100%);
+    -webkit-transform: rotate(-2.5deg);
+    -moz-transform: rotate(-2.5deg);
+    -o-transform: rotate(-2.5deg);
+    -ms-transform: rotate(-2.5deg);
+     transform: rotate(-2.5deg);
+    -webkit-transform-origin: 100% 0%;
+    -moz-transform-origin: 100% 0%;
+    -o-transform-origin: 100% 0%;
+    -ms-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
+}
+
+a::-moz-selection {
+    color: #fff;
+    background-color: #ff812e;
+    text-shadow: none;
+}
+
+a::-webkit-selection {
+    color: #fff;
+    background-color: #ff812e;
+    text-shadow: none;
+}
+
+a::selection {
+    color: #fff;
+    background-color: #ff812e;
+    text-shadow: none;
+}
+
+/* (This is a proof of concept and does not optimize selector performance.) */
+</style>
+
+</head>
+<body>
+
+<a href="#" class="fauxomnes">Eventbrite</a>
+
+<!-- Above: class attribute only required for Typekit -->
+
+</body>
+</html>
+
+<!--
+I'm using radial gradients on the pseudo elements so that they blend with the linear gradient in the primary element. This is because linear gradients would have been rotated along with their psuedo elements and would have clashed at the edges.
+-->
+
+<!--Created: 2011 December 1-->
